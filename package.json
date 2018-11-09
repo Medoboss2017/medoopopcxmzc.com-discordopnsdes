@@ -1,0 +1,16 @@
+{
+  "name": "tezk",
+  "version": "2.1.0",
+  "description": "tezkbot",
+  "main": "tezk.js",
+  "scripts": {
+    "test": "node tezk.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2",
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
+
