@@ -47,34 +47,26 @@ client.on('message',async message => {
     }
   });
  
+
 client.on('message', message => {
-  var prefix = ".";
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id !== "307630049656438788") return;
+var prefix = ".";
 
-if (message.content.startsWith(prefix + 'setgame')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(Playing: **${argresult})
-} 
-
-if (message.content.startsWith(prefix + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/v5bz%22);
-     console.log('test' + argresult);
-    message.channel.sendMessage(Streaming: **${argresult})
-} 
+if (!message.content.startsWith(prefix)) return;
+var args = message.content.split(' ').slice(1);
+var argresult = args.join(' ');
+if (message.author.id == 439393453332234243) return;
+if (message.content.startsWith(prefix + 'playing')) {
+if (message.author.id !== '439393453332234243') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+client.user.setGame(argresult);
+ message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
+} else
 
 if (message.content.startsWith(prefix + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(Username Changed To **${argresult}**)
-  return message.reply("You Can change the username 2 times per hour");
-} 
-if (message.content.startsWith(prefix + 'setavatar')) {
-  client.user.setAvatar(argresult);
-   message.channel.sendMessage(Avatar Changed Successfully To **${argresult}**);
-}
-});
+if (message.author.id !== '439393453332234243') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+client.user.setUsername(argresult).the
+message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
+return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+} else
 
 client.login(process.env.BOT_TOKEN);
 
